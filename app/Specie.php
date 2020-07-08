@@ -16,11 +16,9 @@ class Specie extends Model
     }
     public static function addOne($request)
     {
-        
         $specie = new Specie;
         $specie->name = $request->name;
         $specie->save();
-
         return;
     }
     public static function getOne($request)
@@ -32,7 +30,6 @@ class Specie extends Model
         $specie = Specie::find($request->id);
         $specie->name = $request->name;
         $specie->save();
-
         return;
 
     }

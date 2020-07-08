@@ -25,16 +25,16 @@
     </div>
     <div class="form-group">
         <label for="weight">Poids</label>
-        <input type="texte" class="form-control" name="weight">
+        <input type="number" class="form-control" name="weight">
     </div>
-    <td>
+    <div class="form-group">
         <select class="custom-select" name="specie_id" required>
             <option value="" disabled selected>Sélectionner l'espèce : </option>
             @foreach ($species as $specie)
                 <option value="{{$specie->id}}">{{$specie->name}}</option>
             @endforeach
         </select>
-    </td>
+    </div>
     <button type="submit" class="btn btn-primary">Ajouter</button>
 </form>
 </div>

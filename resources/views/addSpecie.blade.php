@@ -5,15 +5,14 @@
 @section('content')
 
 <div class="container">
-
-<form class="w-75" action="/addSpecie" method="post">
-    @csrf
-    <div class="form-group">
-        <label for="name">Nom</label>
-        <input type="texte" class="form-control" id="name" name="name">
-    </div>
-    <button type="submit" class="btn btn-primary">Ajouter</button>
-</form>
+    <form class="w-75" action="/addSpecie" method="post">
+        @csrf
+        <div class="form-group">
+            <label for="name">Nom</label>
+            <input type="texte" class="form-control" id="name" name="name">
+        </div>
+        <button type="submit" class="btn btn-primary">Ajouter</button>
+    </form>
 </div>
 
 <div class="container">
@@ -21,9 +20,7 @@
         <thead class="thead-light">
             <tr>
                 <th>Nom</th>
-
                 <th colspan="2"></th>
-    
             </tr>
         </thead>
         @foreach ($species as $specie)
@@ -38,6 +35,8 @@
         </tr>
         @endforeach
     </div>
+
+    {{-- DELETE MODAL --}}
 
     <div class="modal" id="deleteSpecie" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenteredLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">

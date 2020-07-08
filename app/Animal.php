@@ -28,7 +28,6 @@ class Animal extends Model
         $animal->weight = $request->weight;
         $animal->specie_id = $request->specie_id;
         $animal->save();
-
         return;
     }
     public static function getOne($request)
@@ -45,7 +44,6 @@ class Animal extends Model
         $animal->weight = $request->weight;
         $animal->specie_id = $request->specie_id;
         $animal->save();
-
         return;
 
     }

@@ -9,6 +9,8 @@ use App\Specie;
 
 class ActionController extends Controller
 {
+    // ANIMALS SECTION
+
     public function suppAnimal(Request $request)
     {
         Animal::supp($request);
@@ -24,6 +26,9 @@ class ActionController extends Controller
         Animal::updateOne($request);
         return redirect('/');
     }
+
+    // SPECIES SECTION
+
     public function addSpecie(Request $request)
     {
         Specie::addOne($request);
